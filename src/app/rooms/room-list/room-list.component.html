@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <tr>
+      <th>Even-Odd</th>
+      <th>Room number</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Photo</th>
+      <th>Amenities</th>
+      <th>Check-In</th>
+      <th>Check-Out</th>
+    </tr>
+    <tr [ngClass]="e ? 'even1' : 'odd'" *ngFor="let i of roomsArr ; let e = even; let o = odd;">
+      <td>{{ e ? "Even" : "Odd" }}</td>
+      <td>{{i.roomNumber}}</td>
+      <td>{{ i.type | lowercase }}</td>
+      <td>{{ i.price | currency: 'INR' }}</td>
+      <td>{{ i.photos }}</td>
+      <td>{{ i.amenities }}</td>
+      <td>{{ i.checkIn}}</td>
+      <td>{{ i.checkOut}}</td>
+      <td>{{i.rating}}</td>
+      <td>
+        <!-- <button (click)="select(i)"
+        class="btn btn-primary"> DELETE</button> -->
+        <button class="btn btn-primary"[routerLink]="[i.roomNumber]">Select</button>
+      </td>
+    </tr>
+  </table>

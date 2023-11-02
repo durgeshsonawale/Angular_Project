@@ -1,0 +1,20 @@
+
+<h1 class="centered-button">Welcome to hotel </h1>
+
+<app-header></app-header>
+
+
+<div *ngIf="isButtonDisabled" class="text-center">
+  <h1>There are a total of 10 rooms</h1>
+</div>
+<button (click)="add()">ADD</button>
+<div *ngIf="room.availableRooms > 0">
+  <h1 class="text-center">Room List</h1>
+  <app-room-list [roomsArr]="roomList" (selectedRoom)="deleteRoom($event)" ></app-room-list>
+</div>
+<div class="centered-button"> 
+ <button (click)="toggle()" class="btn btn-primary" >Toggle</button> 
+ <button (click)="editRoom()" class="btn btn-primary" >Edit</button>
+ 
+ 
+

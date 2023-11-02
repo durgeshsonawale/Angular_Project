@@ -1,0 +1,37 @@
+<form class="centerq" (ngSubmit)="addRoom()">
+    <div class="form-group">
+        <input class="'form-control" type="text" name="roomNumber" [(ngModel)]="room.roomNumber" placeholder="Room Number"/>
+
+    </div>
+    <div class="form-group">
+        <input class="'form-control" type="text" name="roomType" [(ngModel)]="room.type" placeholder="Room Type"/>
+    </div>
+    <div class="form-group">
+        <input class="'form-control" type="text" name="ameneties" [(ngModel)]="room.amenities" placeholder="ammenities"/>
+    </div>
+    <div class="form-group">
+        <input class="'form-control" type="number" name="price" [(ngModel)]="room.price" placeholder="Price"/>
+    </div>
+    <div class="form-group">
+        <input class="'form-control" type="text" name="photos" [(ngModel)]="room.photos" placeholder="Photo"/>
+    </div>
+    <div class="form-group">
+        <input class="'form-control" type="text" name="checkIn" [(ngModel)]="room.checkIn" placeholder="Check-In"/>
+    </div>
+    <div class="form-group">
+        <input class="'form-control" type="datetime" name="checkOut" [(ngModel)]="room.checkOut" placeholder="Check-Out">
+    </div>
+    <div class="form-group">
+        <input class="'form-control" type="number" name="rating" [(ngModel)]="room.rating" placeholder="Rating"/>
+    </div>
+    
+    <div>
+        <button class="btn btn-primary" type="submit"> Submit </button>
+    </div>
+
+
+
+
+
+
+</form>
